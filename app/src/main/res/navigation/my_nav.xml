@@ -11,7 +11,7 @@
         android:label="fragment_log_in_fragment"
         tools:layout="@layout/fragment_log_in" >
         <action
-            android:id="@+id/action_logIn_fragment_to_landing_fragment"
+            android:id="@+id/navigateToLanding"
             app:destination="@id/landing_fragment" />
     </fragment>
     <fragment
