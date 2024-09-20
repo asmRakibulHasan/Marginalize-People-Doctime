@@ -34,6 +34,9 @@ class LogIn_fragment : Fragment() {
         binding.btnLogin.setOnClickListener{
             findNavController().navigate(R.id.navigateToLanding)
         }
+        binding.btnLogin1.setOnClickListener{
+            findNavController().navigate(R.id.navigateToSpechToText)
+        }
     }
 
 

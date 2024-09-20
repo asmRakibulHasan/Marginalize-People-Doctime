@@ -13,10 +13,18 @@
         <action
             android:id="@+id/navigateToLanding"
             app:destination="@id/landing_fragment" />
+        <action
+            android:id="@+id/navigateToSpechToText"
+            app:destination="@id/speechToText" />
     </fragment>
     <fragment
         android:id="@+id/landing_fragment"
         android:name="com.example.marginalize_people_doctime.Landing_fragment"
         android:label="fragment_landing_fragment"
         tools:layout="@layout/fragment_landing" />
+    <fragment
+        android:id="@+id/speechToText"
+        android:name="com.example.marginalize_people_doctime.SpeechToText"
+        android:label="fragment_speech_to_text"
+        tools:layout="@layout/fragment_speech_to_text" />
 </navigation>
