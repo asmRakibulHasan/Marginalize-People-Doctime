@@ -30,36 +30,61 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchControlPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topPanel">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:hint="আপনার অনুসন্ধান লিখুন."
+            android:textColorHint="#ADBBEB"
+            android:inputType="text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="পাঠান"
+            app:layout_constraintStart_toStartOf="@id/editText"
+            app:layout_constraintTop_toBottomOf="@id/editText"
+            app:layout_constraintEnd_toEndOf="@id/editText"/>
+
+        <ImageView
+            android:id="@+id/mic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/mic_icon"
+            app:layout_constraintStart_toEndOf="@id/editText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/editText"
+            app:layout_constraintBottom_toBottomOf="@id/editText"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <TextView
         android:id="@+id/resutText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="সার্চ রেজাল্ট আসছে। অনুগ্রহ করে অপেক্ষা করুন।"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topPanel"
-        app:layout_constraintBottom_toTopOf="@id/mic"/>
+        app:layout_constraintTop_toBottomOf="@id/searchControlPanel"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/resutText"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="mic"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:padding="10dp"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

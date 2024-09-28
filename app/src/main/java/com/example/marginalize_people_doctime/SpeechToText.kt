@@ -4,17 +4,18 @@ import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.os.Bundle
 import android.speech.RecognizerIntent
-import androidx.fragment.app.Fragment
+import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.marginalize_people_doctime.databinding.FragmentSpeechToTextBinding
 import com.google.ai.client.generativeai.GenerativeModel
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
-import java.util.Locale
 import java.util.Objects
+
 
 class SpeechToText : Fragment() {
 
@@ -38,8 +39,29 @@ class SpeechToText : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         binding.mic.setOnClickListener{
-            micClicked()
+            if(isInternetAvailable(requireActivity())){
+                micClicked()
+            }else{
+                Toast.makeText(requireActivity(), "Please Check Internet Connection.", Toast.LENGTH_LONG).show()
+            }
+        }
+
+        binding.resutText.movementMethod = ScrollingMovementMethod()
+
+        binding.sendBtn.setOnClickListener{
+
+            val searchText = binding.editText.text
+
+            if(!isInternetAvailable(requireActivity())){
+                Toast.makeText(requireActivity(), "Please Check Internet Connection.", Toast.LENGTH_LONG).show()
+            }else if(searchText.isEmpty()){
+                Toast.makeText(requireActivity(), "Empty Search text.", Toast.LENGTH_LONG).show()
+            }else{
+                prompt = searchText.toString()
+                modelCall()
+            }
         }
 
     }
