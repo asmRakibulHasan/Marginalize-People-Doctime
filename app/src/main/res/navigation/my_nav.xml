@@ -7,24 +7,65 @@
 
     <fragment
         android:id="@+id/logIn_fragment"
-        android:name="com.example.marginalize_people_doctime.LogIn_fragment"
+        android:name="com.example.marginalize_people_doctime.LogInFragment"
         android:label="fragment_log_in_fragment"
         tools:layout="@layout/fragment_log_in" >
         <action
             android:id="@+id/navigateToLanding"
-            app:destination="@id/landing_fragment" />
+            app:destination="@id/landing_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
         <action
-            android:id="@+id/navigateToSpechToText"
-            app:destination="@id/speechToText" />
+            android:id="@+id/navigateToSignUpScreen"
+            app:destination="@id/signUp"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/landing_fragment"
-        android:name="com.example.marginalize_people_doctime.Landing_fragment"
+        android:name="com.example.marginalize_people_doctime.LandingFragment"
         android:label="fragment_landing_fragment"
-        tools:layout="@layout/fragment_landing" />
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/navigateToSpechToText"
+            app:destination="@id/speechToText"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/navigateToImageSearch"
+            app:destination="@id/imageSearch"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_landing_fragment_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
     <fragment
         android:id="@+id/speechToText"
         android:name="com.example.marginalize_people_doctime.SpeechToText"
         android:label="fragment_speech_to_text"
         tools:layout="@layout/fragment_speech_to_text" />
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.example.marginalize_people_doctime.SignUp"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" />
+    <fragment
+        android:id="@+id/imageSearch"
+        android:name="com.example.marginalize_people_doctime.ImageSearch"
+        android:label="fragment_imagesearch"
+        tools:layout="@layout/fragment_imagesearch" />
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.marginalize_people_doctime.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>

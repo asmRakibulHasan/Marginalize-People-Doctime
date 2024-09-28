@@ -17,16 +17,13 @@ import android.webkit.ValueCallback
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContextCompat
+import com.example.marginalize_people_doctime.databinding.FragmentImagesearchBinding
 import com.example.marginalize_people_doctime.databinding.FragmentLandingBinding
-import com.example.marginalize_people_doctime.databinding.FragmentLogInBinding
 
 
-class Landing_fragment : Fragment() {
+class ImageSearch : Fragment() {
 
-    private lateinit var binding: FragmentLandingBinding
+    private lateinit var binding: FragmentImagesearchBinding
     private lateinit var webView: WebView
     private var fileUploadCallback: ValueCallback<Array<Uri>>? = null
     private lateinit var currentPhotoUri: Uri
@@ -41,8 +38,7 @@ class Landing_fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentLandingBinding.inflate(inflater, container, false)
+        binding = FragmentImagesearchBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -51,6 +47,7 @@ class Landing_fragment : Fragment() {
         takePermission()
         setUpWebview()
     }
+
 
     override fun onResume() {
         super.onResume()

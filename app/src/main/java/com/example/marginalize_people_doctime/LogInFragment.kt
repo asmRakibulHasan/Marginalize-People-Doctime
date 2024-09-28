@@ -5,13 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.marginalize_people_doctime.databinding.FragmentLogInBinding
 
 
-class LogIn_fragment : Fragment() {
+class LogInFragment : Fragment() {
 
     private lateinit var binding: FragmentLogInBinding
 
@@ -31,11 +29,18 @@ class LogIn_fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnLogin.setOnClickListener{
+//        binding.btnLogin.setOnClickListener{
+//            findNavController().navigate(R.id.navigateToLanding)
+//        }
+//        binding.btnLogin1.setOnClickListener{
+//            findNavController().navigate(R.id.navigateToSpechToText)
+//        }
+
+        binding.buttonLogin.setOnClickListener{
             findNavController().navigate(R.id.navigateToLanding)
         }
-        binding.btnLogin1.setOnClickListener{
-            findNavController().navigate(R.id.navigateToSpechToText)
+        binding.btnSignUp.setOnClickListener{
+            findNavController().navigate(R.id.navigateToSignUpScreen)
         }
     }
 

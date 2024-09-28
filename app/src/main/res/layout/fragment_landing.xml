@@ -3,11 +3,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Landing_fragment">
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LandingFragment">
 
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+<!--    <WebView-->
+<!--        android:id="@+id/webView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:text="হোম"
+        android:layout_marginTop="@dimen/_150sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonVoiceSearch"/>
+
+    <Button
+        android:id="@+id/buttonVoiceSearch"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:text="ভয়েস অনুসন্ধান"
+        app:layout_constraintStart_toStartOf="@id/buttonHome"
+        app:layout_constraintEnd_toEndOf="@id/buttonHome"
+        app:layout_constraintTop_toBottomOf="@id/buttonHome"
+        app:layout_constraintBottom_toTopOf="@id/buttonDoctor"/>
+
+    <Button
+        android:id="@+id/buttonDoctor"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:text="ডাক্তার"
+        app:layout_constraintStart_toStartOf="@id/buttonVoiceSearch"
+        app:layout_constraintEnd_toEndOf="@id/buttonVoiceSearch"
+        app:layout_constraintTop_toBottomOf="@id/buttonVoiceSearch"
+        app:layout_constraintBottom_toTopOf="@id/buttonDiagnostic"/>
+
+    <Button
+        android:id="@+id/buttonDiagnostic"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:text="ডায়াগনস্টিক"
+        app:layout_constraintStart_toStartOf="@id/buttonDoctor"
+        app:layout_constraintEnd_toEndOf="@id/buttonDoctor"
+        app:layout_constraintTop_toBottomOf="@id/buttonDoctor"
+        app:layout_constraintBottom_toTopOf="@id/buttonOthers"/>
+
+    <Button
+        android:id="@+id/buttonOthers"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:text="অন্যান্য"
+        android:layout_marginBottom="@dimen/_150sdp"
+        app:layout_constraintStart_toStartOf="@id/buttonDiagnostic"
+        app:layout_constraintEnd_toEndOf="@id/buttonDiagnostic"
+        app:layout_constraintTop_toBottomOf="@id/buttonDiagnostic"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
