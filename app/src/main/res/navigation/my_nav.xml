@@ -45,8 +45,12 @@
             app:popEnterAnim="@anim/stationary"
             app:popExitAnim="@anim/slide_out_left" />
         <action
-            android:id="@+id/action_landing_fragment_to_home2"
-            app:destination="@id/home2" />
+            android:id="@+id/navigateToHome"
+            app:destination="@id/home2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left"  />
     </fragment>
     <fragment
         android:id="@+id/speechToText"

@@ -32,6 +32,10 @@ class LandingFragment : Fragment() {
         binding.buttonVoiceSearch.setOnClickListener{
             findNavController().navigate(R.id.navigateToSpechToText)
         }
+
+        binding.buttonHome.setOnClickListener{
+            findNavController().navigate(R.id.navigateToHome)
+        }
     }
 
 

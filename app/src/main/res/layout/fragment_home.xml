@@ -1,14 +1,452 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".Home">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#A4CED7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_margin="@dimen/_15sdp"
+            android:fontFamily="@font/roboto_black"
+            android:textColor="#D9372B"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bttomPanel"
+        app:layout_constraintTop_toBottomOf="@+id/topPanel">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/doctorlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="জনপ্রিয় বিশেষজ্ঞ"
+            android:layout_margin="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/doctor1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_135sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doctorlist">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+                <ImageView
+                    android:id="@+id/imgView1"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:src="@drawable/doc1"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/rating1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="১৮+ বছর"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="@+id/imgView1"
+                    app:layout_constraintTop_toBottomOf="@id/imgView1"
+                    app:layout_constraintEnd_toEndOf="@id/imgView1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="অভিজ্ঞতা"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/rating1"
+                    app:layout_constraintEnd_toEndOf="@id/rating1"
+                    app:layout_constraintTop_toBottomOf="@id/rating1"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintStart_toEndOf="@id/imgView1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/doctorName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ডাঃ ইসরাত জাহান (ইলা)"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/doc1details1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="এমবিবিএস, এফসিপিএস (স্ত্রীরোগ)"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/doctorName1"
+                        app:layout_constraintTop_toBottomOf="@+id/doctorName1"/>
+
+                    <TextView
+                        android:id="@+id/doc1details2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ল্যাপারোস্কোপিক সার্জারি (ভারত)"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/doc1details1"
+                        app:layout_constraintTop_toBottomOf="@+id/doc1details1"/>
+
+                    <TextView
+                        android:id="@+id/doc1details3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="স্ত্রীরোগ বিশেষজ্ঞস্ত্রীরোগ বিশেষজ্ঞ"
+                        android:textColor="#3F51B5"
+                        android:textSize="15dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="@+id/doc1details2"
+                        app:layout_constraintTop_toBottomOf="@+id/doc1details2"/>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="৪০০ টাকা"
+                        android:textColor="#E91E63"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/details"/>
+
+                    <TextView
+                        android:id="@+id/details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ডাক্তার দেখান >"
+                        android:textColor="#3F51B5"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/doctor2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_135sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doctor1">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+                <ImageView
+                    android:id="@+id/imgView2"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:src="@drawable/doc1"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/rating2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="১৮+ বছর"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="@+id/imgView2"
+                    app:layout_constraintTop_toBottomOf="@id/imgView2"
+                    app:layout_constraintEnd_toEndOf="@id/imgView2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="অভিজ্ঞতা"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/rating2"
+                    app:layout_constraintEnd_toEndOf="@id/rating2"
+                    app:layout_constraintTop_toBottomOf="@id/rating2"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintStart_toEndOf="@id/imgView2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/doctorName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ডাঃ ইসরাত জাহান (ইলা)"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/doc2details1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="এমবিবিএস, এফসিপিএস (স্ত্রীরোগ)"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/doctorName2"
+                        app:layout_constraintTop_toBottomOf="@+id/doctorName2"/>
+
+                    <TextView
+                        android:id="@+id/doc2details2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ল্যাপারোস্কোপিক সার্জারি (ভারত)"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/doc2details1"
+                        app:layout_constraintTop_toBottomOf="@+id/doc2details1"/>
+
+                    <TextView
+                        android:id="@+id/doc2details3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="স্ত্রীরোগ বিশেষজ্ঞস্ত্রীরোগ বিশেষজ্ঞ"
+                        android:textColor="#3F51B5"
+                        android:textSize="15dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="@+id/doc2details2"
+                        app:layout_constraintTop_toBottomOf="@+id/doc2details2"/>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="৪০০ টাকা"
+                        android:textColor="#E91E63"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/details2"/>
+
+                    <TextView
+                        android:id="@+id/details2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ডাক্তার দেখান >"
+                        android:textColor="#3F51B5"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/doctor3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_135sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doctor2"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+                <ImageView
+                    android:id="@+id/imgView3"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:src="@drawable/doc1"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/rating3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="১৮+ বছর"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="@+id/imgView3"
+                    app:layout_constraintTop_toBottomOf="@id/imgView3"
+                    app:layout_constraintEnd_toEndOf="@id/imgView3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="অভিজ্ঞতা"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/rating3"
+                    app:layout_constraintEnd_toEndOf="@id/rating3"
+                    app:layout_constraintTop_toBottomOf="@id/rating3"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintStart_toEndOf="@id/imgView3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/doctorName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ডাঃ ইসরাত জাহান (ইলা)"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/doc3details1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="এমবিবিএস, এফসিপিএস (স্ত্রীরোগ)"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/doctorName3"
+                        app:layout_constraintTop_toBottomOf="@+id/doctorName3"/>
+
+                    <TextView
+                        android:id="@+id/doc3details2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ল্যাপারোস্কোপিক সার্জারি (ভারত)"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/doc3details1"
+                        app:layout_constraintTop_toBottomOf="@+id/doc3details1"/>
+
+                    <TextView
+                        android:id="@+id/doc3details3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="স্ত্রীরোগ বিশেষজ্ঞস্ত্রীরোগ বিশেষজ্ঞ"
+                        android:textColor="#3F51B5"
+                        android:textSize="15dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="@+id/doc3details2"
+                        app:layout_constraintTop_toBottomOf="@+id/doc3details2"/>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="৪০০ টাকা"
+                        android:textColor="#E91E63"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/details3"/>
+
+                    <TextView
+                        android:id="@+id/details3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ডাক্তার দেখান >"
+                        android:textColor="#3F51B5"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bttomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#A4CED7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="বিস্তারিত জানুন"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
