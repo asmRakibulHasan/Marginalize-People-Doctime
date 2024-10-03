@@ -71,5 +71,18 @@
         android:id="@+id/home2"
         android:name="com.example.marginalize_people_doctime.Home"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/navigateToDoctorDetails"
+            app:destination="@id/doctorDetails"  
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorDetails"
+        android:name="com.example.marginalize_people_doctime.DoctorDetails"
+        android:label="fragment_doctordetails"
+        tools:layout="@layout/fragment_doctordetails" />
 </navigation>

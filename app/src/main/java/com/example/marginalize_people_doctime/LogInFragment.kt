@@ -39,16 +39,16 @@ class LogInFragment : Fragment() {
         Log.d("NullCheck", "Login ${userViewModel.name} ${userViewModel.age} ${userViewModel.mobile} ${userViewModel.password}")
 
         binding.buttonLogin.setOnClickListener{
-            val mobile  = binding.editTextMobileNo.text.toString()
-            val password  = binding.editTextPassword.text.toString()
-
-            if(mobile.isEmpty() || password.isEmpty() ){
-                showNullNotification()
-                return@setOnClickListener
-            }else if(mobile != userViewModel.mobile || password != userViewModel.password){
-                showWrongPassNotification()
-                return@setOnClickListener
-            }
+//            val mobile  = binding.editTextMobileNo.text.toString()
+//            val password  = binding.editTextPassword.text.toString()
+//
+//            if(mobile.isEmpty() || password.isEmpty() ){
+//                showNullNotification()
+//                return@setOnClickListener
+//            }else if(mobile != userViewModel.mobile || password != userViewModel.password){
+//                showWrongPassNotification()
+//                return@setOnClickListener
+//            }
 
             findNavController().navigate(R.id.navigateToLanding)
         }
