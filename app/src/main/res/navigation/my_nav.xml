@@ -51,6 +51,13 @@
             app:exitAnim="@anim/stationary"
             app:popEnterAnim="@anim/stationary"
             app:popExitAnim="@anim/slide_out_left"  />
+        <action
+            android:id="@+id/navigateToOthers"
+            app:destination="@id/othersScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/speechToText"
@@ -74,7 +81,7 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/navigateToDoctorDetails"
-            app:destination="@id/doctorDetails"  
+            app:destination="@id/doctorDetails"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/stationary"
             app:popEnterAnim="@anim/stationary"
@@ -85,4 +92,19 @@
         android:name="com.example.marginalize_people_doctime.DoctorDetails"
         android:label="fragment_doctordetails"
         tools:layout="@layout/fragment_doctordetails" />
+    <fragment
+        android:id="@+id/othersScreen"
+        android:name="com.example.marginalize_people_doctime.OthersScreen"
+        android:label="fragment_others_screen"
+        tools:layout="@layout/fragment_others_screen" >
+        <action
+            android:id="@+id/navigateToLogin"
+            app:destination="@id/logIn_fragment"
+            app:popUpTo="@id/logIn_fragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
 </navigation>

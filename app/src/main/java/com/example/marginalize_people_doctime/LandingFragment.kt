@@ -36,6 +36,11 @@ class LandingFragment : Fragment() {
         binding.buttonHome.setOnClickListener{
             findNavController().navigate(R.id.navigateToHome)
         }
+
+        binding.buttonOthers.setOnClickListener{
+            findNavController().navigate(R.id.navigateToOthers)
+        }
+
     }
 
 
