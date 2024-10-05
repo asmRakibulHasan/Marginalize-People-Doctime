@@ -26,7 +26,7 @@ class LandingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonDiagnostic.setOnClickListener{
-            findNavController().navigate(R.id.navigateToImageSearch)
+            findNavController().navigate(R.id.navigateToDiagnostic)
         }
 
         binding.buttonVoiceSearch.setOnClickListener{
@@ -39,6 +39,10 @@ class LandingFragment : Fragment() {
 
         binding.buttonOthers.setOnClickListener{
             findNavController().navigate(R.id.navigateToOthers)
+        }
+
+        binding.buttonDoctor.setOnClickListener{
+            findNavController().navigate(R.id.navigateLandingToDetails)
         }
 
     }

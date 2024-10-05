@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.marginalize_people_doctime.databinding.FragmentDetailsKnowBinding
 import com.example.marginalize_people_doctime.databinding.FragmentHomeBinding
-import com.example.marginalize_people_doctime.databinding.FragmentSpeechToTextBinding
 
 
-class Home : Fragment() {
-
-    private lateinit var binding: FragmentHomeBinding
+class DetailsKnow : Fragment() {
+    private lateinit var binding: FragmentDetailsKnowBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,8 +22,7 @@ class Home : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        binding =  FragmentHomeBinding.inflate(inflater, container, false)
+        binding =  FragmentDetailsKnowBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -32,19 +30,15 @@ class Home : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.doctor1.setOnClickListener{
-            findNavController().navigate(R.id.navigateToDoctorDetails)
+            findNavController().navigate(R.id.navigateDetailsToDoctorDetails)
         }
 
         binding.doctor2.setOnClickListener{
-            findNavController().navigate(R.id.navigateToDoctorDetails)
+            findNavController().navigate(R.id.navigateDetailsToDoctorDetails)
         }
 
         binding.doctor3.setOnClickListener{
-            findNavController().navigate(R.id.navigateToDoctorDetails)
-        }
-
-        binding.detailsKnow.setOnClickListener{
-            findNavController().navigate(R.id.navigateHomeToDetails)
+            findNavController().navigate(R.id.navigateDetailsToDoctorDetails)
         }
 
     }

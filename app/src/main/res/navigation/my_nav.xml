@@ -38,13 +38,6 @@
             app:popEnterAnim="@anim/stationary"
             app:popExitAnim="@anim/slide_out_left" />
         <action
-            android:id="@+id/navigateToImageSearch"
-            app:destination="@id/imageSearch"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/stationary"
-            app:popEnterAnim="@anim/stationary"
-            app:popExitAnim="@anim/slide_out_left" />
-        <action
             android:id="@+id/navigateToHome"
             app:destination="@id/home2"
             app:enterAnim="@anim/slide_in_right"
@@ -54,6 +47,20 @@
         <action
             android:id="@+id/navigateToOthers"
             app:destination="@id/othersScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/navigateToDiagnostic"
+            app:destination="@id/prescriptionSelectionScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/navigateLandingToDetails"
+            app:destination="@id/detailsKnow2"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/stationary"
             app:popEnterAnim="@anim/stationary"
@@ -86,6 +93,13 @@
             app:exitAnim="@anim/stationary"
             app:popEnterAnim="@anim/stationary"
             app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/navigateHomeToDetails"
+            app:destination="@id/detailsKnow2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/doctorDetails"
@@ -102,6 +116,32 @@
             app:destination="@id/logIn_fragment"
             app:popUpTo="@id/logIn_fragment"
             app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/prescriptionSelectionScreen"
+        android:name="com.example.marginalize_people_doctime.DiagnosticScreen"
+        android:label="fragment_prescription_selection_screen"
+        tools:layout="@layout/fragment_diagnostic_screen" >
+        <action
+            android:id="@+id/navigateToImageSearch"
+            app:destination="@id/imageSearch"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsKnow2"
+        android:name="com.example.marginalize_people_doctime.DetailsKnow"
+        android:label="fragment_details_know"
+        tools:layout="@layout/fragment_details_know" >
+        <action
+            android:id="@+id/navigateDetailsToDoctorDetails"
+            app:destination="@id/doctorDetails"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/stationary"
             app:popEnterAnim="@anim/stationary"
